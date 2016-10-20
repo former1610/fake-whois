@@ -1,0 +1,10 @@
+[Unit]
+Description=Fake WHOIS Server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/fake-whois.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
